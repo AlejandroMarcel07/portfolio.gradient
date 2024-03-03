@@ -1,0 +1,524 @@
+
+/*COLORES GLOBALES*/
+:root {
+  /* COLORES DE ICONOS O BOTONES */
+  --ColorSecundario: white;
+  --ColorPrimario: rgb(219, 218, 218);
+  --ColorButton: rgba(147, 105, 219, 0.062);
+
+  --BackgroundComponente: #050a1edc;
+
+  /* --BorderColorLeft: rgba(128, 128, 128, 0.678);
+  --BordeColorTop: rgba(128, 128, 128, 0.425); */
+
+  --BorderColorLeft01: rgb(255, 115, 0);
+  --BorderColorLeft02: rgba(64, 223, 149, 0.678);
+}
+.containerPrincipal{
+  z-index: 5;
+}
+
+/* Apariencia de las columnas de los componentes */
+
+.ColumnaApariencia {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Background de las columnas de los componentes */
+
+.BackgroundMenu {
+  background-color: var(--BackgroundComponente);
+  border-top: solid 2px var(--BordeColorTop);
+  border-left: solid 2px var(--BorderColorLeft);
+}
+.BackgroundSobreMi {
+  background-color: var(--BackgroundComponente);
+  border-top: solid 2px var(--BordeColorTop);
+  border-left: solid 2px var(--BorderColorLeft02);
+  /* backdrop-filter: blur(20px); */
+
+  /* box-shadow: 10px 10px 40px -15px rgba(3, 131, 44, 0.5); */
+}
+
+.BackgroundPerfil {
+  background-color: var(--BackgroundComponente);
+  border-top: solid 2px var(--BordeColorTop);
+  border-left: solid 2px var(--BorderColorLeft02);
+}
+
+.BackgroundMusica {
+  background-color: var(--BackgroundComponente);
+  border-top: solid 2px var(--BordeColorTop);
+  border-left: solid 2px var(--BorderColorLeft01);
+}
+
+.BackgroundPrueba {
+  background-color: var(--BackgroundComponente);
+  border-top: solid 2px var(--BordeColorTop);
+  border-left: solid 2px var(--BorderColorLeft);
+}
+
+.BackgroundProyecto {
+  background-color: var(--BackgroundComponente);
+  border-top: solid 2px var(--BorderColorLeft02);
+  border-bottom: solid 2px var(--BorderColorLeft02);
+  
+}
+
+/* Alto de las columna de los componentes */
+
+.ColumnaAlto01 {
+  height: 60px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ColumnaAlto02 {
+  height: 300px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ColumnaAlto03 {
+  height: 200px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ColumnaAlto04 {
+    height: 240px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+/* Componente menu */
+.ComponenteMenu {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ComponenteMenu h5 {
+  margin-left: 20px;
+  margin-top: 5px;
+  color: rgb(219, 218, 218);
+  font-weight: bold;
+  font-family: "Nunito";
+  font-size: 18px;
+}
+
+/* Componente Objetivo */
+.ComponenteObjetivo {
+  height: 80%;
+  width: 80%;
+}
+
+.ComponenteObjetivo h5 {
+  color: rgb(219, 218, 218);
+  font-weight: bold;
+  font-family: "Nunito";
+}
+
+.ComponenteObjetivo p {
+  color: gray;
+}
+
+/* Componente sobre mi */
+
+.ComponenteSobreMi {
+  width: 80%;
+  height: 80%;
+}
+
+.ComponenteSobreMi h1 {
+  color: rgb(0, 255, 115);
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  
+}
+
+.ComponenteSobreMi h2 {
+  color: var(--ColorSecundario);
+  margin-bottom: 20px;
+}
+
+.ComponenteSobreMi p {
+  color: gray;
+  margin-top: 10px;
+}
+
+/* Componente Musica */
+.ComponenteMusica {
+  height: 90%;
+  width: 85%;
+}
+
+.ContenedorImagen {
+  width: 100%;
+  height: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  
+  
+}
+
+.ContenedorImagen img {
+  height: 97%;
+  width: 97%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  z-index: 2;
+  
+}
+
+.ComponenteMusica h5 {
+  color: var(--ColorSecundario);
+  font-size: 17px;
+}
+
+.ContenedorTItuloSong {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.ComponenteMusica p {
+  color: gray;
+}
+
+.ContendorBotonesMusica {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.ComponenteMusica.play .BordeAnimadoBodyHijo {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.ComponenteMusica.play .BordeAnimadoBodyHijo:before {
+  content: "";
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  background-image: conic-gradient(
+    rgb(255, 115, 0) 10deg,
+    rgba(255, 115, 0, 0.692) 30deg,
+    transparent 90deg
+  );
+  animation: AnimatioRotar 5s linear infinite;
+}
+
+@keyframes AnimatioRotar {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.ComponenteMusica.play .BordeAnimadoBodyHijo::after {
+  content: "";
+  position: absolute;
+  height: 97%;
+  width: 97%;
+  border-radius: 10px;
+}
+
+/* Componente fecha dia */
+.ComponenteFechaDia {
+  height: 80%;
+  width: 80%;
+}
+
+.ComponenteFechaDia h5 {
+  color: rgb(219, 218, 218);
+  font-weight: bold;
+  font-family: "Nunito";
+}
+
+.ComponenteFechaDia p {
+  color: gray;
+}
+
+.ComponenteTiempo {
+  width: 100%;
+  height: 60px;
+  border-radius: 5px;
+  background-color: rgba(83, 121, 228, 0.062);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  border-left: solid 2px var(--BorderColorLeft02);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+.ComponenteTiempo p {
+  color: rgb(156, 156, 156);
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 13px;
+}
+
+.ComponenteTecnologia {
+  height: 80%;
+  width: 90%;
+}
+
+.ComponenteTecnologia h5 {
+  color: rgb(219, 218, 218);
+  font-weight: bold;
+  font-family: "Nunito";
+}
+.ComponenteTecnologia p {
+  color: gray;
+}
+
+
+.contenedorIco{
+  background-color: rgba(83, 121, 228, 0.062); 
+  border-left: solid 2px var(--BorderColorLeft01);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  animation: bounce 3s infinite;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ColumnaIco{
+ 
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.ColumnaIco img {
+  /* Estilo inicial */
+  transition: transform 0.3s ease;
+  
+}
+
+.ColumnaIco img:hover {
+  transform: rotate(50deg);
+}
+
+/* Componente hobbie */
+.ComponenteHobbie {
+  height: 80%;
+  width: 80%;
+}
+
+.ComponenteHobbie h5 {
+  color: rgb(219, 218, 218);
+  font-weight: bold;
+  font-family: "Nunito";
+}
+
+.ComponenteHobbie p {
+  color: gray;
+}
+
+
+/* Componente card */
+
+.ComponenteCard{
+  height: 100%;
+  width: 100%;
+}
+.ComponenteCard h5 {
+  color: rgb(219, 218, 218);
+  font-weight: bold;
+  font-family: "Nunito";
+}
+
+.ComponenteCard p {
+  color: gray;
+}
+
+.ContenedorTituloCard{
+  width: 100%;
+  height: 75%;
+  padding: 20px;
+}
+
+.ContenedorArcorIco{
+  height: 25%;
+  width: 100%;
+  background-color: rgba(83, 121, 228, 0.062) ;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ContenedorArcorIco h5{
+  font-size: 18px;
+  margin-left: 15px;
+  font-weight: 100;
+  font-weight: 500;
+  margin-top: 10px;
+  color: rgb(0, 255, 115);
+  animation: fadeIn 3s infinite; 
+}
+
+@keyframes fadeIn {
+  0% {color: rgb(0, 255, 115);}
+  50% {color: rgba(64, 223, 149, 0.473)}
+  100% {color: rgb(0, 255, 115);}
+}
+
+@keyframes bounce{
+  0%{transform: translateY(0);}
+  50%{transform: translateY(-2px);}
+  100%{transform: translateY(0);}
+}
+
+
+/* Componente mensaje por consola */
+.ComponenteMensajeConsolas{
+  height: 80%;
+  width: 90%;
+}
+
+.ComponenteMensajeConsolas h5{
+  color: rgb(219, 218, 218);
+  font-weight: bold;
+  font-family: "Nunito";
+}
+
+.ComponenteMensajeConsolas .lenguajesMensaje{
+  color: gray;
+  font-weight: bold;
+}
+.ComponenteMensajeConsolas .mensajeMensaje{
+  color: gray;
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.ComponenteMensajeConsolas .fraseMensaje{
+  color: gray;
+  margin-top: 20px;
+}
+
+
+/* .AnimacionFlotar01 {
+  animation: Flotar 2s infinite;
+
+}
+.AnimacionFlotar02 {
+  animation: Flotar 2s infinite;
+}
+.AnimacionFlotar03 {
+  animation: Flotar 2s infinite;
+}
+
+@keyframes Flotar {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-2px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+} */
+
+/* Componente boton */
+.btnPersonalizado {
+  background-color: var(--ColorButton);
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  color: var(--ColorSecundario);
+  transition: transform 0.2s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btnPersonalizado:hover {
+  transform: translateY(-2px);
+}
+
+.btnArcor {
+  display: inline-block;
+  padding: 7px;
+  text-decoration: none;
+  color: var(--ColorSecundario);
+  background-color: var(--ColorButton);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btnArcor:hover {
+  transform: translateY(-2px);
+}
+
+.Ancor02 {
+  display: inline-block;
+  padding: 7px;
+  text-decoration: none;
+  color: var(--ColorSecundario);
+  background-color: var(--ColorButton);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin-right: 10px;
+  transition: transform 0.2s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Ancor02:hover {
+  transform: translateY(-2px);
+}
+
+/* Medias query modificacion de componentes responsive */
+
+@media (min-width: 1400px) {
+  .ContenedorCentral {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+}
